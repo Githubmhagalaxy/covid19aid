@@ -1,5 +1,5 @@
 {
-    "name": "covid-helper-server",
+    "name": "covidaid-server",
     "version": "0.0.0",
     "private": true,
     "scripts": {
