@@ -1,0 +1,35 @@
+$blue: #2c3e50;
+$blueHover: #1e2b37;
+$blueLight: #05A4F4;
+$mediumGray: #CDCDCD;
+$blue1: #2F80ED;
+$green2: #27AE60;
+$grey5: #dddddd;
+$grey4: #BDBDBD;
+$grey3: #828282;
+$grey2: #4F4F4F;
+$grey1: #333333;
+$background: #ecf0f1;
+
+@mixin flex($dir: row, $jus: center, $al: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $al;
+}
+
+@mixin transition {
+    transition: all 0.3s ease;
+}
+
+@mixin max-768 {
+    @media screen and (max-width: 768px) {
+        @content
+    }
+}
+
+@mixin max-1000 {
+    @media screen and (max-width: 1000px) {
+        @content
+    }
+}

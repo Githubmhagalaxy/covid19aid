@@ -1,0 +1,318 @@
+@import "./Assets/styles/vars";
+@import "./Assets/styles/reset";
+
+.title {
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    text-align: center;
+    @include max-1000 {
+        font-size: 1.5rem;
+    }
+}
+
+.title-2 {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: center;
+    @include max-1000 {
+        font-size: 1.2rem;
+    }
+}
+
+p {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 25px;
+    @include max-1000 {
+        font-size: 0.8rem;
+    }
+    &.justify {
+        text-align: justify;
+    }
+}
+
+.container {
+    @include max-768 {
+        max-width: calc(100% - 32px);
+    }
+}
+
+.btn-sec, .submit-sec {
+    a, button, input[type=submit], .button {
+        background-color: $blue;
+        padding: 10px 50px;
+        font-size: 1.2rem;
+        line-height: 25px;
+        font-weight: 500;
+        color: #ffffff;
+        border-radius: 5px;
+        display: inline-block;
+        border: none;
+        @include transition;
+        @include max-1000 {
+            font-size: 0.8rem;
+            padding: 5px 30px;
+        }
+        &:hover {
+            background-color: $blueHover;
+        }
+    }
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+header {
+    background-color: $blue;
+    color: #ffffff;
+    nav {
+        .navbar-brand {
+            font-weight: 500;
+            color: #ffffff!important;
+        }
+        .navbar-toggler-icon {
+            color: #ffffff;
+        }
+        .icon {
+            svg, i {
+                width: 15px
+            }
+        }
+    }
+}
+
+section.home {
+    .container {
+        padding: 100px 0;
+        margin: 50px auto;
+        background-color: $background;
+        border-radius: 5px;
+        > * {
+            margin-bottom: 15px;
+        }
+        p {
+            text-align: center;
+        }
+        .btn-sec {
+            text-align: center;
+        }
+    }
+}
+
+ul.cart-wrapper {
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: wrap;
+    > li {
+        flex: 0 0 30%;
+        @include max-1000 {
+            flex: 0 0 50%;
+        }
+        @include max-768 {
+            flex: 1 1 100%;
+        }
+        margin: 20px auto;
+        @include flex(column, center, center);
+        padding: 20px 0 4px 0;
+        background-color: $background;
+        border-radius: 5px;
+        h5 {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+    &.large {
+        > li {
+            flex: 0 0 49%;
+            padding: 20px ;
+            @include max-1000 {
+                flex: 1 1 100%;
+            }
+            @include flex(column, flex-start, flex-start)
+        }
+    }
+}
+
+section.statistics {
+    padding: 20px 0;
+    margin: 50px auto;
+    .statistics-area {
+        ul {
+
+        }
+    }
+    article.country-statistics {
+        .form-container {
+            background-color: $background;
+            border-radius: 5px;
+            padding: 20px 0;
+        }
+        #results {
+            .btn-sec {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+form {
+    max-width: 800px;
+    margin: 10px auto;
+    @include max-768 {
+        max-width: calc(100% - 32px);
+    }
+    select, input[type=text], input[type=email], input[type=password] {
+        padding: 10px;
+        font-size: 1rem;
+        background-color: transparent;
+        border: 2px solid $blue;
+        border-radius: 5px;
+        @include transition;
+        width: 100%;
+        margin-bottom: 15px;
+        &:hover, &:focus {
+            border-color: $blueHover;
+        }
+    }
+    label {
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    input[type=radio] {
+        appearance: none;
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $blueHover;
+        margin: 0;
+        border-radius: 50px;
+        &:checked {
+            background-color: $blueHover;
+        }
+    }
+}
+
+section.food-camp-sec {
+    .location-form {
+        .container {
+            form.get-location-form {
+                .location-type {
+                    margin: 20px auto;
+                    @include flex(row, space-around, center);
+                    flex-wrap: wrap;
+                    @include max-768 {
+                        @include flex(column, center, center);
+                    }
+                    > div {
+                        @include flex(row, center, center);
+                        label {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.location-form, .hospital-form {
+    .container {
+        padding: 50px 0;
+        margin: 70px auto;
+        background-color: $background;
+        border-radius: 5px;
+        form.get-location-form {
+            .location-type {
+                margin: 20px auto;
+                @include flex(row, space-around, center);
+                flex-wrap: wrap;
+                @include max-768 {
+                    @include flex(column, center, center);
+                }
+                > div {
+                    @include flex(row, center, center);
+                    label {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-results {
+    .inner-column {
+        //min-height: 500px;
+        p {
+            font-size: 1em;
+            line-height: 30px;
+            .name {
+                color: $blue;
+                text-transform: uppercase;
+            }
+            .value {
+                color: $grey1;
+            }
+        }
+    }
+}
+
+section.about, section.signup, section.login, section.not-found {
+    .container {
+        padding: 50px 100px;
+        margin: 70px auto;
+        background-color: $background;
+        border-radius: 5px;
+        @include max-1000 {
+            padding: 50px 0;
+        }
+        ol {
+            padding-left: 30px;
+        }
+    }
+    p, .error {
+        text-align: center;
+    }
+}
+
+.error {
+    color: red;
+}
+
+section.saved-statistics {
+    padding: 50px 0;
+    h5 {
+        font-size: 1.2rem;
+        text-align: center;
+        @include max-768 {
+            font-size: 0.8rem;
+        }
+    }
+    li {
+        margin: 20px auto;
+        .inner-column {
+            padding: 10px;
+            border: 2px solid $blue;
+            border-radius: 5px;
+        }
+    }
+}
+
+section.saved-food-camps, section.saved-hospitals {
+    padding: 50px 0;
+}
+
+.loading {
+    img {
+        width: 70px;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        z-index: 10;
+    }
+}
