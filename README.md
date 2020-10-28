@@ -23,6 +23,8 @@ The following screen shots show the web application's appearance and functionali
 In the root directory run these commands
 
 `npm install`
+
+
 `npm start`
 
 
